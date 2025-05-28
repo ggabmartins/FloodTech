@@ -1,4 +1,4 @@
 package br.com.fiap.bean;
 
-public class Endereco {
+public class Informacao {
 }
