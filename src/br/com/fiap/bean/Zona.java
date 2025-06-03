@@ -25,7 +25,7 @@ public class Zona {
 
     //metodos particulares
     public static String getZonas() {
-        // Retorna as zonas separadas por vírgula ou número para o menu
+
         return "1 - Zona Norte\n"
                 + "2 - Zona Sul\n"
                 + "3 - Zona Leste\n"
