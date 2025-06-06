@@ -7,6 +7,10 @@ import javax.swing.JOptionPane;
 public class MainUsuario {
     public static void main(String[] args) {
 
+        //boas vindas
+        JOptionPane.showMessageDialog(null,"Olá seja bem-vindo (a) ao FloodTech!\n" +
+                "Para inicriarmos clique em OK","Boas-vindas",JOptionPane.INFORMATION_MESSAGE);
+
         // Cadastro do usuário
         String nome = JOptionPane.showInputDialog(null, "Digite seu nome:","Nome",
                 JOptionPane.QUESTION_MESSAGE);
