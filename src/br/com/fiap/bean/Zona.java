@@ -1,6 +1,7 @@
 package br.com.fiap.bean;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 public class Zona {
     private String nome;
@@ -29,7 +30,7 @@ public class Zona {
         this.bairrosPerigosos = bairrosPerigosos;
     }
 
-    // Método estático que retorna as opções de zonas
+    // Métodos
     public static String getZonas() {
         return "1 - Zona Norte\n"
                 + "2 - Zona Sul\n"
@@ -38,7 +39,7 @@ public class Zona {
                 + "5 - Centro\n";
     }
 
-    // Método estático que retorna os bairros perigosos conforme a zona escolhida
+
     public static String getBairrosPorZona(int opcaoZona) {
         switch(opcaoZona) {
             case 1:
@@ -56,8 +57,10 @@ public class Zona {
         }
     }
 
-    // Simulação da previsão do tempo para uma data específica (sobrecarga)
     public String simularPrevisao(LocalDate data) {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        String dataFormatada = data.format(formatter);
+
         int dia = data.getDayOfMonth();
         int chuva = 10 + (dia % 3) * 10; // Pode ser 10, 20 ou 30 mm
         String risco;
@@ -68,11 +71,7 @@ public class Zona {
         } else {
             risco = "BAIXO";
         }
-        return "Previsão para " + data + " na zona " + nome + ": " + chuva + "mm de chuva. Risco de enchente: " + risco + ".";
-    }
-
-    // Simulação da previsão do tempo para a data atual (sobrecarga)
-    public String simularPrevisao() {
-        return simularPrevisao(LocalDate.now());
+        return "Previsão para " + dataFormatada + " na zona " + nome + ": " + chuva + "mm de chuva. " +
+                "\nRisco de enchente: " + risco + ".";
     }
 }

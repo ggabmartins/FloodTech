@@ -8,13 +8,13 @@ import java.time.LocalDate;
 public class MainUsuario {
     public static void main(String[] args) {
 
-        // Boas vindas
+
         JOptionPane.showMessageDialog(null,
                 "Olá seja bem-vindo (a) ao FloodTech!\nPara iniciarmos clique em OK",
                 "Boas-vindas",
                 JOptionPane.INFORMATION_MESSAGE);
 
-        // Cadastro do usuário
+
         String nome = JOptionPane.showInputDialog(null, "Digite seu nome:", "Nome", JOptionPane.QUESTION_MESSAGE);
         String telefone = JOptionPane.showInputDialog(null, "Digite seu telefone:", "Telefone", JOptionPane.QUESTION_MESSAGE);
 
